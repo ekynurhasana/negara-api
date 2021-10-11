@@ -1,0 +1,328 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 01, 2021 at 03:30 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `negara_api`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `info`
+--
+
+CREATE TABLE `info` (
+  `id_data` int(11) NOT NULL,
+  `Nama_Negara` varchar(52) DEFAULT NULL,
+  `Domain` varchar(3) DEFAULT NULL,
+  `Kode_Negara` varchar(3) DEFAULT NULL,
+  `Kode_Telepon` varchar(5) DEFAULT NULL,
+  `Ibukota` varchar(19) DEFAULT NULL,
+  `Benua` varchar(8) DEFAULT NULL,
+  `Kawasan` varchar(25) DEFAULT NULL,
+  `Populasi` int(10) DEFAULT NULL,
+  `Lattitude` varchar(11) DEFAULT NULL,
+  `Longitude` varchar(12) DEFAULT NULL,
+  `Luas_Wilayah` int(8) DEFAULT NULL,
+  `Nama_Asli` varchar(58) DEFAULT NULL,
+  `Mata_Uang` varchar(39) DEFAULT NULL,
+  `Bahasa` varchar(15) DEFAULT NULL,
+  `Bendera` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `info`
+--
+
+INSERT INTO `info` (`id_data`, `Nama_Negara`, `Domain`, `Kode_Negara`, `Kode_Telepon`, `Ibukota`, `Benua`, `Kawasan`, `Populasi`, `Lattitude`, `Longitude`, `Luas_Wilayah`, `Nama_Asli`, `Mata_Uang`, `Bahasa`, `Bendera`) VALUES
+(1, 'Afghanistan', '.af', 'AFG', '93', 'Kabul', 'Asia', 'Southern Asia', 27657145, '33', '65', 652230, 'افغانستان', 'Afghan afghani', 'Pashto', 'https://restcountries.eu/data/afg.svg'),
+(2, 'Åland Islands', '.ax', 'ALA', '358', 'Mariehamn', 'Europe', 'Northern Europe', 28875, '60.116667', '19.9', 1580, 'Åland', 'Euro', 'Swedish', 'https://restcountries.eu/data/ala.svg'),
+(3, 'Albania', '.al', 'ALB', '355', 'Tirana', 'Europe', 'Southern Europe', 2886026, '41', '20', 28748, 'Shqipëria', 'Albanian lek', 'Albanian', 'https://restcountries.eu/data/alb.svg'),
+(4, 'Algeria', '.dz', 'DZA', '213', 'Algiers', 'Africa', 'Northern Africa', 40400000, '28', '3', 2381741, 'الجزائر', 'Algerian dinar', 'Arabic', 'https://restcountries.eu/data/dza.svg'),
+(5, 'American Samoa', '.as', 'ASM', '1684', 'Pago Pago', 'Oceania', 'Polynesia', 57100, '-14.3333333', '-170', 199, 'American Samoa', 'United State Dollar', 'English', 'https://restcountries.eu/data/asm.svg'),
+(6, 'Andorra', '.ad', 'AND', '376', 'Andorra la Vella', 'Europe', 'Southern Europe', 78014, '42.5', '1.5', 468, 'Andorra', 'Euro', 'Catalan', 'https://restcountries.eu/data/and.svg'),
+(7, 'Angola', '.ao', 'AGO', '244', 'Luanda', 'Africa', 'Middle Africa', 25868000, '-12.5', '18.5', 1246700, 'Angola', 'Angolan kwanza', 'Portuguese', 'https://restcountries.eu/data/ago.svg'),
+(8, 'Anguilla', '.ai', 'AIA', '1264', 'The Valley', 'Americas', 'Caribbean', 13452, '18.25', '-63.16666666', 91, 'Anguilla', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/aia.svg'),
+(9, 'Antarctica', '.aq', 'ATA', '672', '', 'Polar', '', 1000, '-74.65', '4.48', 14000000, 'Antarctica', 'Australian dollar', 'English', 'https://restcountries.eu/data/ata.svg'),
+(10, 'Antigua and Barbuda', '.ag', 'ATG', '1268', 'Saint John\'s', 'Americas', 'Caribbean', 86295, '17.05', '-61.8', 442, 'Antigua and Barbuda', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/atg.svg'),
+(11, 'Argentina', '.ar', 'ARG', '54', 'Buenos Aires', 'Americas', 'South America', 43590400, '-34', '-64', 2780400, 'Argentina', 'Argentine peso', 'Spanish', 'https://restcountries.eu/data/arg.svg'),
+(12, 'Armenia', '.am', 'ARM', '374', 'Yerevan', 'Asia', 'Western Asia', 2994400, '40', '45', 29743, 'Հայաստան', 'Armenian dram', 'Armenian', 'https://restcountries.eu/data/arm.svg'),
+(13, 'Aruba', '.aw', 'ABW', '297', 'Oranjestad', 'Americas', 'Caribbean', 107394, '12.5', '-69.96666666', 180, 'Aruba', 'Aruban florin', 'Dutch', 'https://restcountries.eu/data/abw.svg'),
+(14, 'Australia', '.au', 'AUS', '61', 'Canberra', 'Oceania', 'Australia and New Zealand', 24117360, '-27', '133', 7692024, 'Australia', 'Australian dollar', 'English', 'https://restcountries.eu/data/aus.svg'),
+(15, 'Austria', '.at', 'AUT', '43', 'Vienna', 'Europe', 'Western Europe', 8725931, '47.33333333', '13.33333333', 83871, 'Österreich', 'Euro', 'German', 'https://restcountries.eu/data/aut.svg'),
+(16, 'Azerbaijan', '.az', 'AZE', '994', 'Baku', 'Asia', 'Western Asia', 9730500, '40.5', '47.5', 86600, 'Azərbaycan', 'Azerbaijani manat', 'Azerbaijani', 'https://restcountries.eu/data/aze.svg'),
+(17, 'Bahamas', '.bs', 'BHS', '1242', 'Nassau', 'Americas', 'Caribbean', 378040, '24.25', '-76', 13943, 'Bahamas', 'Bahamian dollar', 'English', 'https://restcountries.eu/data/bhs.svg'),
+(18, 'Bahrain', '.bh', 'BHR', '973', 'Manama', 'Asia', 'Western Asia', 1404900, '26', '50.55', 765, '‏البحرين', 'Bahraini dinar', 'Arabic', 'https://restcountries.eu/data/bhr.svg'),
+(19, 'Bangladesh', '.bd', 'BGD', '880', 'Dhaka', 'Asia', 'Southern Asia', 161006790, '24', '90', 147570, 'Bangladesh', 'Bangladeshi taka', 'Bengali', 'https://restcountries.eu/data/bgd.svg'),
+(20, 'Barbados', '.bb', 'BRB', '1246', 'Bridgetown', 'Americas', 'Caribbean', 285000, '13.16666666', '-59.53333333', 430, 'Barbados', 'Barbadian dollar', 'English', 'https://restcountries.eu/data/brb.svg'),
+(21, 'Belarus', '.by', 'BLR', '375', 'Minsk', 'Europe', 'Eastern Europe', 9498700, '53', '28', 207600, 'Белару́сь', 'New Belarusian ruble', 'Belarusian', 'https://restcountries.eu/data/blr.svg'),
+(22, 'Belgium', '.be', 'BEL', '32', 'Brussels', 'Europe', 'Western Europe', 11319511, '50.83333333', '4', 30528, 'België', 'Euro', 'Dutch', 'https://restcountries.eu/data/bel.svg'),
+(23, 'Belize', '.bz', 'BLZ', '501', 'Belmopan', 'Americas', 'Central America', 370300, '17.25', '-88.75', 22966, 'Belize', 'Belize dollar', 'English', 'https://restcountries.eu/data/blz.svg'),
+(24, 'Benin', '.bj', 'BEN', '229', 'Porto-Novo', 'Africa', 'Western Africa', 10653654, '9.5', '2.25', 112622, 'Bénin', 'West African CFA franc', 'French', 'https://restcountries.eu/data/ben.svg'),
+(25, 'Bermuda', '.bm', 'BMU', '1441', 'Hamilton', 'Americas', 'Northern America', 61954, '32.33333333', '-64.75', 54, 'Bermuda', 'Bermudian dollar', 'English', 'https://restcountries.eu/data/bmu.svg'),
+(26, 'Bhutan', '.bt', 'BTN', '975', 'Thimphu', 'Asia', 'Southern Asia', 775620, '27.5', '90.5', 38394, 'ʼbrug-yul', 'Bhutanese ngultrum', 'Dzongkha', 'https://restcountries.eu/data/btn.svg'),
+(27, 'Bolivia (Plurinational State of)', '.bo', 'BOL', '591', 'Sucre', 'Americas', 'South America', 10985059, '-17', '-65', 1098581, 'Bolivia', 'Bolivian boliviano', 'Spanish', 'https://restcountries.eu/data/bol.svg'),
+(28, 'Bonaire, Sint Eustatius and Saba', '.an', 'BES', '5997', 'Kralendijk', 'Americas', 'Caribbean', 17408, '12.15', '-68.266667', 294, 'Bonaire', 'United States dollar', 'Dutch', 'https://restcountries.eu/data/bes.svg'),
+(29, 'Bosnia and Herzegovina', '.ba', 'BIH', '387', 'Sarajevo', 'Europe', 'Southern Europe', 3531159, '44', '18', 51209, 'Bosna i Hercegovina', 'Bosnia and Herzegovina convertible mark', 'Bosnian', 'https://restcountries.eu/data/bih.svg'),
+(30, 'Botswana', '.bw', 'BWA', '267', 'Gaborone', 'Africa', 'Southern Africa', 2141206, '-22', '24', 582000, 'Botswana', 'Botswana pula', 'English', 'https://restcountries.eu/data/bwa.svg'),
+(31, 'Bouvet Island', '.bv', 'BVT', '', '', '', '', 0, '-54.4333333', '3.4', 49, 'Bouvetøya', 'Norwegian krone', 'Norwegian', 'https://restcountries.eu/data/bvt.svg'),
+(32, 'Brazil', '.br', 'BRA', '55', 'Brasília', 'Americas', 'South America', 206135893, '-10', '-55', 8515767, 'Brasil', 'Brazilian real', 'Portuguese', 'https://restcountries.eu/data/bra.svg'),
+(33, 'British Indian Ocean Territory', '.io', 'IOT', '246', 'Diego Garcia', 'Africa', 'Eastern Africa', 3000, '-6', '71.5', 60, 'British Indian Ocean Territory', 'United States dollar', 'English', 'https://restcountries.eu/data/iot.svg'),
+(34, 'United States Minor Outlying Islands', '.us', 'UMI', '', '', 'Americas', 'Northern America', 300, '', '', 0, 'United States Minor Outlying Islands', 'United States Dollar', 'English', 'https://restcountries.eu/data/umi.svg'),
+(35, 'Virgin Islands (British)', '.vg', 'VGB', '1284', 'Road Town', 'Americas', 'Caribbean', 28514, '18.431383', '-64.62305', 151, 'British Virgin Islands', '[D]', 'English', 'https://restcountries.eu/data/vgb.svg'),
+(36, 'Virgin Islands (U.S.)', '.vi', 'VIR', '1 340', 'Charlotte Amalie', 'Americas', 'Caribbean', 114743, '18.34', '-64.93', 346, 'Virgin Islands of the United States', 'United States dollar', 'English', 'https://restcountries.eu/data/vir.svg'),
+(37, 'Brunei Darussalam', '.bn', 'BRN', '673', 'Bandar Seri Begawan', 'Asia', 'South-Eastern Asia', 411900, '4.5', '114.66666666', 5765, 'Negara Brunei Darussalam', 'Brunei dollar', 'Malay', 'https://restcountries.eu/data/brn.svg'),
+(38, 'Bulgaria', '.bg', 'BGR', '359', 'Sofia', 'Europe', 'Eastern Europe', 7153784, '43', '25', 110879, 'България', 'Bulgarian lev', 'Bulgarian', 'https://restcountries.eu/data/bgr.svg'),
+(39, 'Burkina Faso', '.bf', 'BFA', '226', 'Ouagadougou', 'Africa', 'Western Africa', 19034397, '13', '-2', 272967, 'Burkina Faso', 'West African CFA franc', 'French', 'https://restcountries.eu/data/bfa.svg'),
+(40, 'Burundi', '.bi', 'BDI', '257', 'Bujumbura', 'Africa', 'Eastern Africa', 10114505, '-3.5', '30', 27834, 'Burundi', 'Burundian franc', 'French', 'https://restcountries.eu/data/bdi.svg'),
+(41, 'Cambodia', '.kh', 'KHM', '855', 'Phnom Penh', 'Asia', 'South-Eastern Asia', 15626444, '13', '105', 181035, 'Kâmpŭchéa', 'Cambodian riel', 'Khmer', 'https://restcountries.eu/data/khm.svg'),
+(42, 'Cameroon', '.cm', 'CMR', '237', 'Yaoundé', 'Africa', 'Middle Africa', 22709892, '6', '12', 475442, 'Cameroon', 'Central African CFA franc', 'English', 'https://restcountries.eu/data/cmr.svg'),
+(43, 'Canada', '.ca', 'CAN', '1', 'Ottawa', 'Americas', 'Northern America', 36155487, '60', '-95', 9984670, 'Canada', 'Canadian dollar', 'English', 'https://restcountries.eu/data/can.svg'),
+(44, 'Cabo Verde', '.cv', 'CPV', '238', 'Praia', 'Africa', 'Western Africa', 531239, '16', '-24', 4033, 'Cabo Verde', 'Cape Verdean escudo', 'Portuguese', 'https://restcountries.eu/data/cpv.svg'),
+(45, 'Cayman Islands', '.ky', 'CYM', '1345', 'George Town', 'Americas', 'Caribbean', 58238, '19.5', '-80.5', 264, 'Cayman Islands', 'Cayman Islands dollar', 'English', 'https://restcountries.eu/data/cym.svg'),
+(46, 'Central African Republic', '.cf', 'CAF', '236', 'Bangui', 'Africa', 'Middle Africa', 4998000, '7', '21', 622984, 'Ködörösêse tî Bêafrîka', 'Central African CFA franc', 'French', 'https://restcountries.eu/data/caf.svg'),
+(47, 'Chad', '.td', 'TCD', '235', 'N\'Djamena', 'Africa', 'Middle Africa', 14497000, '15', '19', 1284000, 'Tchad', 'Central African CFA franc', 'French', 'https://restcountries.eu/data/tcd.svg'),
+(48, 'Chile', '.cl', 'CHL', '56', 'Santiago', 'Americas', 'South America', 18191900, '-30', '-71', 756102, 'Chile', 'Chilean peso', 'Spanish', 'https://restcountries.eu/data/chl.svg'),
+(49, 'China', '.cn', 'CHN', '86', 'Beijing', 'Asia', 'Eastern Asia', 1377422166, '35', '105', 9640011, '中国', 'Chinese yuan', 'Chinese', 'https://restcountries.eu/data/chn.svg'),
+(50, 'Christmas Island', '.cx', 'CXR', '61', 'Flying Fish Cove', 'Oceania', 'Australia and New Zealand', 2072, '-10.5', '105.66666666', 135, 'Christmas Island', 'Australian dollar', 'English', 'https://restcountries.eu/data/cxr.svg'),
+(51, 'Cocos (Keeling) Islands', '.cc', 'CCK', '61', 'West Island', 'Oceania', 'Australia and New Zealand', 550, '-12.5', '96.83333333', 14, 'Cocos (Keeling) Islands', 'Australian dollar', 'English', 'https://restcountries.eu/data/cck.svg'),
+(52, 'Colombia', '.co', 'COL', '57', 'Bogotá', 'Americas', 'South America', 48759958, '4', '-72', 1141748, 'Colombia', 'Colombian peso', 'Spanish', 'https://restcountries.eu/data/col.svg'),
+(53, 'Comoros', '.km', 'COM', '269', 'Moroni', 'Africa', 'Eastern Africa', 806153, '-12.1666666', '44.25', 1862, 'Komori', 'Comorian franc', 'Arabic', 'https://restcountries.eu/data/com.svg'),
+(54, 'Congo', '.cg', 'COG', '242', 'Brazzaville', 'Africa', 'Middle Africa', 4741000, '-1', '15', 342000, 'République du Congo', 'Central African CFA franc', 'French', 'https://restcountries.eu/data/cog.svg'),
+(55, 'Congo (Democratic Republic of the)', '.cd', 'COD', '243', 'Kinshasa', 'Africa', 'Middle Africa', 85026000, '0', '25', 2344858, 'République démocratique du Congo', 'Congolese franc', 'French', 'https://restcountries.eu/data/cod.svg'),
+(56, 'Cook Islands', '.ck', 'COK', '682', 'Avarua', 'Oceania', 'Polynesia', 18100, '-21.2333333', '-159.7666666', 236, 'Cook Islands', 'New Zealand dollar', 'English', 'https://restcountries.eu/data/cok.svg'),
+(57, 'Costa Rica', '.cr', 'CRI', '506', 'San José', 'Americas', 'Central America', 4890379, '10', '-84', 51100, 'Costa Rica', 'Costa Rican colón', 'Spanish', 'https://restcountries.eu/data/cri.svg'),
+(58, 'Croatia', '.hr', 'HRV', '385', 'Zagreb', 'Europe', 'Southern Europe', 4190669, '45.16666666', '15.5', 56594, 'Hrvatska', 'Croatian kuna', 'Croatian', 'https://restcountries.eu/data/hrv.svg'),
+(59, 'Cuba', '.cu', 'CUB', '53', 'Havana', 'Americas', 'Caribbean', 11239004, '21.5', '-80', 109884, 'Cuba', 'Cuban convertible peso', 'Spanish', 'https://restcountries.eu/data/cub.svg'),
+(60, 'Curaçao', '.cw', 'CUW', '599', 'Willemstad', 'Americas', 'Caribbean', 154843, '12.116667', '-68.933333', 444, 'Curaçao', 'Netherlands Antillean guilder', 'Dutch', 'https://restcountries.eu/data/cuw.svg'),
+(61, 'Cyprus', '.cy', 'CYP', '357', 'Nicosia', 'Europe', 'Southern Europe', 847000, '35', '33', 9251, 'Κύπρος', 'Euro', 'Greek (modern)', 'https://restcountries.eu/data/cyp.svg'),
+(62, 'Czech Republic', '.cz', 'CZE', '420', 'Prague', 'Europe', 'Eastern Europe', 10558524, '49.75', '15.5', 78865, 'Česká republika', 'Czech koruna', 'Czech', 'https://restcountries.eu/data/cze.svg'),
+(63, 'Denmark', '.dk', 'DNK', '45', 'Copenhagen', 'Europe', 'Northern Europe', 5717014, '56', '10', 43094, 'Danmark', 'Danish krone', 'Danish', 'https://restcountries.eu/data/dnk.svg'),
+(64, 'Djibouti', '.dj', 'DJI', '253', 'Djibouti', 'Africa', 'Eastern Africa', 900000, '11.5', '43', 23200, 'Djibouti', 'Djiboutian franc', 'French', 'https://restcountries.eu/data/dji.svg'),
+(65, 'Dominica', '.dm', 'DMA', '1767', 'Roseau', 'Americas', 'Caribbean', 71293, '15.41666666', '-61.33333333', 751, 'Dominica', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/dma.svg'),
+(66, 'Dominican Republic', '.do', 'DOM', '1809', 'Santo Domingo', 'Americas', 'Caribbean', 10075045, '19', '-70.66666666', 48671, 'República Dominicana', 'Dominican peso', 'Spanish', 'https://restcountries.eu/data/dom.svg'),
+(67, 'Ecuador', '.ec', 'ECU', '593', 'Quito', 'Americas', 'South America', 16545799, '-2', '-77.5', 276841, 'Ecuador', 'United States dollar', 'Spanish', 'https://restcountries.eu/data/ecu.svg'),
+(68, 'Egypt', '.eg', 'EGY', '20', 'Cairo', 'Africa', 'Northern Africa', 91290000, '27', '30', 1002450, 'مصر‎', 'Egyptian pound', 'Arabic', 'https://restcountries.eu/data/egy.svg'),
+(69, 'El Salvador', '.sv', 'SLV', '503', 'San Salvador', 'Americas', 'Central America', 6520675, '13.83333333', '-88.91666666', 21041, 'El Salvador', 'United States dollar', 'Spanish', 'https://restcountries.eu/data/slv.svg'),
+(70, 'Equatorial Guinea', '.gq', 'GNQ', '240', 'Malabo', 'Africa', 'Middle Africa', 1222442, '2', '10', 28051, 'Guinea Ecuatorial', 'Central African CFA franc', 'Spanish', 'https://restcountries.eu/data/gnq.svg'),
+(71, 'Eritrea', '.er', 'ERI', '291', 'Asmara', 'Africa', 'Eastern Africa', 5352000, '15', '39', 117600, 'ኤርትራ', 'Eritrean nakfa', 'Tigrinya', 'https://restcountries.eu/data/eri.svg'),
+(72, 'Estonia', '.ee', 'EST', '372', 'Tallinn', 'Europe', 'Northern Europe', 1315944, '59', '26', 45227, 'Eesti', 'Euro', 'Estonian', 'https://restcountries.eu/data/est.svg'),
+(73, 'Ethiopia', '.et', 'ETH', '251', 'Addis Ababa', 'Africa', 'Eastern Africa', 92206005, '8', '38', 1104300, 'ኢትዮጵያ', 'Ethiopian birr', 'Amharic', 'https://restcountries.eu/data/eth.svg'),
+(74, 'Falkland Islands (Malvinas)', '.fk', 'FLK', '500', 'Stanley', 'Americas', 'South America', 2563, '-51.75', '-59', 12173, 'Falkland Islands', 'Falkland Islands pound', 'English', 'https://restcountries.eu/data/flk.svg'),
+(75, 'Faroe Islands', '.fo', 'FRO', '298', 'Tórshavn', 'Europe', 'Northern Europe', 49376, '62', '-7', 1393, 'Føroyar', 'Danish krone', 'Faroese', 'https://restcountries.eu/data/fro.svg'),
+(76, 'Fiji', '.fj', 'FJI', '679', 'Suva', 'Oceania', 'Melanesia', 867000, '-18', '175', 18272, 'Fiji', 'Fijian dollar', 'English', 'https://restcountries.eu/data/fji.svg'),
+(77, 'Finland', '.fi', 'FIN', '358', 'Helsinki', 'Europe', 'Northern Europe', 5491817, '64', '26', 338424, 'Suomi', 'Euro', 'Finnish', 'https://restcountries.eu/data/fin.svg'),
+(78, 'France', '.fr', 'FRA', '33', 'Paris', 'Europe', 'Western Europe', 66710000, '46', '2', 640679, 'France', 'Euro', 'French', 'https://restcountries.eu/data/fra.svg'),
+(79, 'French Guiana', '.gf', 'GUF', '594', 'Cayenne', 'Americas', 'South America', 254541, '4', '-53', 0, 'Guyane française', 'Euro', 'French', 'https://restcountries.eu/data/guf.svg'),
+(80, 'French Polynesia', '.pf', 'PYF', '689', 'Papeetē', 'Oceania', 'Polynesia', 271800, '-15', '-140', 4167, 'Polynésie française', 'CFP franc', 'French', 'https://restcountries.eu/data/pyf.svg'),
+(81, 'French Southern Territories', '.tf', 'ATF', '', 'Port-aux-Français', 'Africa', 'Southern Africa', 140, '-49.25', '69.167', 7747, 'Territoire des Terres australes et antarctiques françaises', 'Euro', 'French', 'https://restcountries.eu/data/atf.svg'),
+(82, 'Gabon', '.ga', 'GAB', '241', 'Libreville', 'Africa', 'Middle Africa', 1802278, '-1', '11.75', 267668, 'Gabon', 'Central African CFA franc', 'French', 'https://restcountries.eu/data/gab.svg'),
+(83, 'Gambia', '.gm', 'GMB', '220', 'Banjul', 'Africa', 'Western Africa', 1882450, '13.46666666', '-16.56666666', 11295, 'Gambia', 'Gambian dalasi', 'English', 'https://restcountries.eu/data/gmb.svg'),
+(84, 'Georgia', '.ge', 'GEO', '995', 'Tbilisi', 'Asia', 'Western Asia', 3720400, '42', '43.5', 69700, 'საქართველო', 'Georgian Lari', 'Georgian', 'https://restcountries.eu/data/geo.svg'),
+(85, 'Germany', '.de', 'DEU', '49', 'Berlin', 'Europe', 'Western Europe', 81770900, '51', '9', 357114, 'Deutschland', 'Euro', 'German', 'https://restcountries.eu/data/deu.svg'),
+(86, 'Ghana', '.gh', 'GHA', '233', 'Accra', 'Africa', 'Western Africa', 27670174, '8', '-2', 238533, 'Ghana', 'Ghanaian cedi', 'English', 'https://restcountries.eu/data/gha.svg'),
+(87, 'Gibraltar', '.gi', 'GIB', '350', 'Gibraltar', 'Europe', 'Southern Europe', 33140, '36.13333333', '-5.35', 6, 'Gibraltar', 'Gibraltar pound', 'English', 'https://restcountries.eu/data/gib.svg'),
+(88, 'Greece', '.gr', 'GRC', '30', 'Athens', 'Europe', 'Southern Europe', 10858018, '39', '22', 131990, 'Ελλάδα', 'Euro', 'Greek (modern)', 'https://restcountries.eu/data/grc.svg'),
+(89, 'Greenland', '.gl', 'GRL', '299', 'Nuuk', 'Americas', 'Northern America', 55847, '72', '-40', 2166086, 'Kalaallit Nunaat', 'Danish krone', 'Kalaallisut', 'https://restcountries.eu/data/grl.svg'),
+(90, 'Grenada', '.gd', 'GRD', '1473', 'St. George\'s', 'Americas', 'Caribbean', 103328, '12.11666666', '-61.66666666', 344, 'Grenada', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/grd.svg'),
+(91, 'Guadeloupe', '.gp', 'GLP', '590', 'Basse-Terre', 'Americas', 'Caribbean', 400132, '16.25', '-61.583333', 0, 'Guadeloupe', 'Euro', 'French', 'https://restcountries.eu/data/glp.svg'),
+(92, 'Guam', '.gu', 'GUM', '1671', 'Hagåtña', 'Oceania', 'Micronesia', 184200, '13.46666666', '144.78333333', 549, 'Guam', 'United States dollar', 'English', 'https://restcountries.eu/data/gum.svg'),
+(93, 'Guatemala', '.gt', 'GTM', '502', 'Guatemala City', 'Americas', 'Central America', 16176133, '15.5', '-90.25', 108889, 'Guatemala', 'Guatemalan quetzal', 'Spanish', 'https://restcountries.eu/data/gtm.svg'),
+(94, 'Guernsey', '.gg', 'GGY', '44', 'St. Peter Port', 'Europe', 'Northern Europe', 62999, '49.46666666', '-2.58333333', 78, 'Guernsey', 'British pound', 'English', 'https://restcountries.eu/data/ggy.svg'),
+(95, 'Guinea', '.gn', 'GIN', '224', 'Conakry', 'Africa', 'Western Africa', 12947000, '11', '-10', 245857, 'Guinée', 'Guinean franc', 'French', 'https://restcountries.eu/data/gin.svg'),
+(96, 'Guinea-Bissau', '.gw', 'GNB', '245', 'Bissau', 'Africa', 'Western Africa', 1547777, '12', '-15', 36125, 'Guiné-Bissau', 'West African CFA franc', 'Portuguese', 'https://restcountries.eu/data/gnb.svg'),
+(97, 'Guyana', '.gy', 'GUY', '592', 'Georgetown', 'Americas', 'South America', 746900, '5', '-59', 214969, 'Guyana', 'Guyanese dollar', 'English', 'https://restcountries.eu/data/guy.svg'),
+(98, 'Haiti', '.ht', 'HTI', '509', 'Port-au-Prince', 'Americas', 'Caribbean', 11078033, '19', '-72.41666666', 27750, 'Haïti', 'Haitian gourde', 'French', 'https://restcountries.eu/data/hti.svg'),
+(99, 'Heard Island and McDonald Islands', '.hm', 'HMD', '', '', '', '', 0, '-53.1', '72.51666666', 412, 'Heard Island and McDonald Islands', 'Australian dollar', 'English', 'https://restcountries.eu/data/hmd.svg'),
+(100, 'Holy See', '.va', 'VAT', '379', 'Rome', 'Europe', 'Southern Europe', 451, '41.9', '12.45', 0, 'Sancta Sedes', 'Euro', 'Latin', 'https://restcountries.eu/data/vat.svg'),
+(101, 'Honduras', '.hn', 'HND', '504', 'Tegucigalpa', 'Americas', 'Central America', 8576532, '15', '-86.5', 112492, 'Honduras', 'Honduran lempira', 'Spanish', 'https://restcountries.eu/data/hnd.svg'),
+(102, 'Hong Kong', '.hk', 'HKG', '852', 'City of Victoria', 'Asia', 'Eastern Asia', 7324300, '22.25', '114.16666666', 1104, '香港', 'Hong Kong dollar', 'English', 'https://restcountries.eu/data/hkg.svg'),
+(103, 'Hungary', '.hu', 'HUN', '36', 'Budapest', 'Europe', 'Eastern Europe', 9823000, '47', '20', 93028, 'Magyarország', 'Hungarian forint', 'Hungarian', 'https://restcountries.eu/data/hun.svg'),
+(104, 'Iceland', '.is', 'ISL', '354', 'Reykjavík', 'Europe', 'Northern Europe', 334300, '65', '-18', 103000, 'Ísland', 'Icelandic króna', 'Icelandic', 'https://restcountries.eu/data/isl.svg'),
+(105, 'India', '.in', 'IND', '91', 'New Delhi', 'Asia', 'Southern Asia', 1295210000, '20', '77', 3287590, 'भारत', 'Indian rupee', 'Hindi', 'https://restcountries.eu/data/ind.svg'),
+(106, 'Indonesia', '.id', 'IDN', '62', 'Jakarta', 'Asia', 'South-Eastern Asia', 258705000, '-5', '120', 1904569, 'Indonesia', 'Indonesian rupiah', 'Indonesian', 'https://restcountries.eu/data/idn.svg'),
+(107, 'Côte d\'Ivoire', '.ci', 'CIV', '225', 'Yamoussoukro', 'Africa', 'Western Africa', 22671331, '8', '-5', 322463, 'Côte d\'Ivoire', 'West African CFA franc', 'French', 'https://restcountries.eu/data/civ.svg'),
+(108, 'Iran (Islamic Republic of)', '.ir', 'IRN', '98', 'Tehran', 'Asia', 'Southern Asia', 79369900, '32', '53', 1648195, 'ایران', 'Iranian rial', 'Persian (Farsi)', 'https://restcountries.eu/data/irn.svg'),
+(109, 'Iraq', '.iq', 'IRQ', '964', 'Baghdad', 'Asia', 'Western Asia', 37883543, '33', '44', 438317, 'العراق', 'Iraqi dinar', 'Arabic', 'https://restcountries.eu/data/irq.svg'),
+(110, 'Ireland', '.ie', 'IRL', '353', 'Dublin', 'Europe', 'Northern Europe', 6378000, '53', '-8', 70273, 'Éire', 'Euro', 'Irish', 'https://restcountries.eu/data/irl.svg'),
+(111, 'Isle of Man', '.im', 'IMN', '44', 'Douglas', 'Europe', 'Northern Europe', 84497, '54.25', '-4.5', 572, 'Isle of Man', 'British pound', 'English', 'https://restcountries.eu/data/imn.svg'),
+(112, 'Israel', '.il', 'ISR', '972', 'Jerusalem', 'Asia', 'Western Asia', 8527400, '31.5', '34.75', 20770, 'יִשְׂרָאֵל', 'Israeli new shekel', 'Hebrew (modern)', 'https://restcountries.eu/data/isr.svg'),
+(113, 'Italy', '.it', 'ITA', '39', 'Rome', 'Europe', 'Southern Europe', 60665551, '42.83333333', '12.83333333', 301336, 'Italia', 'Euro', 'Italian', 'https://restcountries.eu/data/ita.svg'),
+(114, 'Jamaica', '.jm', 'JAM', '1876', 'Kingston', 'Americas', 'Caribbean', 2723246, '18.25', '-77.5', 10991, 'Jamaica', 'Jamaican dollar', 'English', 'https://restcountries.eu/data/jam.svg'),
+(115, 'Japan', '.jp', 'JPN', '81', 'Tokyo', 'Asia', 'Eastern Asia', 126960000, '36', '138', 377930, '日本', 'Japanese yen', 'Japanese', 'https://restcountries.eu/data/jpn.svg'),
+(116, 'Jersey', '.je', 'JEY', '44', 'Saint Helier', 'Europe', 'Northern Europe', 100800, '49.25', '-2.16666666', 116, 'Jersey', 'British pound', 'English', 'https://restcountries.eu/data/jey.svg'),
+(117, 'Jordan', '.jo', 'JOR', '962', 'Amman', 'Asia', 'Western Asia', 9531712, '31', '36', 89342, 'الأردن', 'Jordanian dinar', 'Arabic', 'https://restcountries.eu/data/jor.svg'),
+(118, 'Kazakhstan', '.kz', 'KAZ', '76', 'Astana', 'Asia', 'Central Asia', 17753200, '48', '68', 2724900, 'Қазақстан', 'Kazakhstani tenge', 'Kazakh', 'https://restcountries.eu/data/kaz.svg'),
+(119, 'Kenya', '.ke', 'KEN', '254', 'Nairobi', 'Africa', 'Eastern Africa', 47251000, '1', '38', 580367, 'Kenya', 'Kenyan shilling', 'English', 'https://restcountries.eu/data/ken.svg'),
+(120, 'Kiribati', '.ki', 'KIR', '686', 'South Tarawa', 'Oceania', 'Micronesia', 113400, '1.41666666', '173', 811, 'Kiribati', 'Australian dollar', 'English', 'https://restcountries.eu/data/kir.svg'),
+(121, 'Kuwait', '.kw', 'KWT', '965', 'Kuwait City', 'Asia', 'Western Asia', 4183658, '29.5', '45.75', 17818, 'الكويت', 'Kuwaiti dinar', 'Arabic', 'https://restcountries.eu/data/kwt.svg'),
+(122, 'Kyrgyzstan', '.kg', 'KGZ', '996', 'Bishkek', 'Asia', 'Central Asia', 6047800, '41', '75', 199951, 'Кыргызстан', 'Kyrgyzstani som', 'Kyrgyz', 'https://restcountries.eu/data/kgz.svg'),
+(123, 'Lao People\'s Democratic Republic', '.la', 'LAO', '856', 'Vientiane', 'Asia', 'South-Eastern Asia', 6492400, '18', '105', 236800, 'ສປປລາວ', 'Lao kip', 'Lao', 'https://restcountries.eu/data/lao.svg'),
+(124, 'Latvia', '.lv', 'LVA', '371', 'Riga', 'Europe', 'Northern Europe', 1961600, '57', '25', 64559, 'Latvija', 'Euro', 'Latvian', 'https://restcountries.eu/data/lva.svg'),
+(125, 'Lebanon', '.lb', 'LBN', '961', 'Beirut', 'Asia', 'Western Asia', 5988000, '33.83333333', '35.83333333', 10452, 'لبنان', 'Lebanese pound', 'Arabic', 'https://restcountries.eu/data/lbn.svg'),
+(126, 'Lesotho', '.ls', 'LSO', '266', 'Maseru', 'Africa', 'Southern Africa', 1894194, '-29.5', '28.5', 30355, 'Lesotho', 'Lesotho loti', 'English', 'https://restcountries.eu/data/lso.svg'),
+(127, 'Liberia', '.lr', 'LBR', '231', 'Monrovia', 'Africa', 'Western Africa', 4615000, '6.5', '-9.5', 111369, 'Liberia', 'Liberian dollar', 'English', 'https://restcountries.eu/data/lbr.svg'),
+(128, 'Libya', '.ly', 'LBY', '218', 'Tripoli', 'Africa', 'Northern Africa', 6385000, '25', '17', 1759540, '‏ليبيا', 'Libyan dinar', 'Arabic', 'https://restcountries.eu/data/lby.svg'),
+(129, 'Liechtenstein', '.li', 'LIE', '423', 'Vaduz', 'Europe', 'Western Europe', 37623, '47.26666666', '9.53333333', 160, 'Liechtenstein', 'Swiss franc', 'German', 'https://restcountries.eu/data/lie.svg'),
+(130, 'Lithuania', '.lt', 'LTU', '370', 'Vilnius', 'Europe', 'Northern Europe', 2872294, '56', '24', 65300, 'Lietuva', 'Euro', 'Lithuanian', 'https://restcountries.eu/data/ltu.svg'),
+(131, 'Luxembourg', '.lu', 'LUX', '352', 'Luxembourg', 'Europe', 'Western Europe', 576200, '49.75', '6.16666666', 2586, 'Luxembourg', 'Euro', 'French', 'https://restcountries.eu/data/lux.svg'),
+(132, 'Macao', '.mo', 'MAC', '853', '', 'Asia', 'Eastern Asia', 649100, '22.16666666', '113.55', 30, '澳門', 'Macanese pataca', 'Chinese', 'https://restcountries.eu/data/mac.svg'),
+(133, 'Macedonia (the former Yugoslav Republic of)', '.mk', 'MKD', '389', 'Skopje', 'Europe', 'Southern Europe', 2058539, '41.83333333', '22', 25713, 'Македонија', 'Macedonian denar', 'Macedonian', 'https://restcountries.eu/data/mkd.svg'),
+(134, 'Madagascar', '.mg', 'MDG', '261', 'Antananarivo', 'Africa', 'Eastern Africa', 22434363, '-20', '47', 587041, 'Madagasikara', 'Malagasy ariary', 'French', 'https://restcountries.eu/data/mdg.svg'),
+(135, 'Malawi', '.mw', 'MWI', '265', 'Lilongwe', 'Africa', 'Eastern Africa', 16832910, '-13.5', '34', 118484, 'Malawi', 'Malawian kwacha', 'English', 'https://restcountries.eu/data/mwi.svg'),
+(136, 'Malaysia', '.my', 'MYS', '60', 'Kuala Lumpur', 'Asia', 'South-Eastern Asia', 31405416, '2.5', '112.5', 330803, 'Malaysia', 'Malaysian ringgit', 'Malaysian', 'https://restcountries.eu/data/mys.svg'),
+(137, 'Maldives', '.mv', 'MDV', '960', 'Malé', 'Asia', 'Southern Asia', 344023, '3.25', '73', 300, 'Maldives', 'Maldivian rufiyaa', 'Divehi', 'https://restcountries.eu/data/mdv.svg'),
+(138, 'Mali', '.ml', 'MLI', '223', 'Bamako', 'Africa', 'Western Africa', 18135000, '17', '-4', 1240192, 'Mali', 'West African CFA franc', 'French', 'https://restcountries.eu/data/mli.svg'),
+(139, 'Malta', '.mt', 'MLT', '356', 'Valletta', 'Europe', 'Southern Europe', 425384, '35.83333333', '14.58333333', 316, 'Malta', 'Euro', 'Maltese', 'https://restcountries.eu/data/mlt.svg'),
+(140, 'Marshall Islands', '.mh', 'MHL', '692', 'Majuro', 'Oceania', 'Micronesia', 54880, '9', '168', 181, 'M̧ajeļ', 'United States dollar', 'English', 'https://restcountries.eu/data/mhl.svg'),
+(141, 'Martinique', '.mq', 'MTQ', '596', 'Fort-de-France', 'Americas', 'Caribbean', 378243, '14.666667', '-61', 0, 'Martinique', 'Euro', 'French', 'https://restcountries.eu/data/mtq.svg'),
+(142, 'Mauritania', '.mr', 'MRT', '222', 'Nouakchott', 'Africa', 'Western Africa', 3718678, '20', '-12', 1030700, 'موريتانيا', 'Mauritanian ouguiya', 'Arabic', 'https://restcountries.eu/data/mrt.svg'),
+(143, 'Mauritius', '.mu', 'MUS', '230', 'Port Louis', 'Africa', 'Eastern Africa', 1262879, '-20.2833333', '57.55', 2040, 'Maurice', 'Mauritian rupee', 'English', 'https://restcountries.eu/data/mus.svg'),
+(144, 'Mayotte', '.yt', 'MYT', '262', 'Mamoudzou', 'Africa', 'Eastern Africa', 226915, '-12.8333333', '45.16666666', 0, 'Mayotte', 'Euro', 'French', 'https://restcountries.eu/data/myt.svg'),
+(145, 'Mexico', '.mx', 'MEX', '52', 'Mexico City', 'Americas', 'Central America', 122273473, '23', '-102', 1964375, 'México', 'Mexican peso', 'Spanish', 'https://restcountries.eu/data/mex.svg'),
+(146, 'Micronesia (Federated States of)', '.fm', 'FSM', '691', 'Palikir', 'Oceania', 'Micronesia', 102800, '6.91666666', '158.25', 702, 'Micronesia', '[D]', 'English', 'https://restcountries.eu/data/fsm.svg'),
+(147, 'Moldova (Republic of)', '.md', 'MDA', '373', 'Chișinău', 'Europe', 'Eastern Europe', 3553100, '47', '29', 33846, 'Moldova', 'Moldovan leu', 'Romanian', 'https://restcountries.eu/data/mda.svg'),
+(148, 'Monaco', '.mc', 'MCO', '377', 'Monaco', 'Europe', 'Western Europe', 38400, '43.73333333', '7.4', 2, 'Monaco', 'Euro', 'French', 'https://restcountries.eu/data/mco.svg'),
+(149, 'Mongolia', '.mn', 'MNG', '976', 'Ulan Bator', 'Asia', 'Eastern Asia', 3093100, '46', '105', 1564110, 'Монгол улс', 'Mongolian tögrög', 'Mongolian', 'https://restcountries.eu/data/mng.svg'),
+(150, 'Montenegro', '.me', 'MNE', '382', 'Podgorica', 'Europe', 'Southern Europe', 621810, '42.5', '19.3', 13812, 'Црна Гора', 'Euro', 'Serbian', 'https://restcountries.eu/data/mne.svg'),
+(151, 'Montserrat', '.ms', 'MSR', '1664', 'Plymouth', 'Americas', 'Caribbean', 4922, '16.75', '-62.2', 102, 'Montserrat', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/msr.svg'),
+(152, 'Morocco', '.ma', 'MAR', '212', 'Rabat', 'Africa', 'Northern Africa', 33337529, '32', '-5', 446550, 'المغرب', 'Moroccan dirham', 'Arabic', 'https://restcountries.eu/data/mar.svg'),
+(153, 'Mozambique', '.mz', 'MOZ', '258', 'Maputo', 'Africa', 'Eastern Africa', 26423700, '-18.25', '35', 801590, 'Moçambique', 'Mozambican metical', 'Portuguese', 'https://restcountries.eu/data/moz.svg'),
+(154, 'Myanmar', '.mm', 'MMR', '95', 'Naypyidaw', 'Asia', 'South-Eastern Asia', 51419420, '22', '98', 676578, 'Myanma', 'Burmese kyat', 'Burmese', 'https://restcountries.eu/data/mmr.svg'),
+(155, 'Namibia', '.na', 'NAM', '264', 'Windhoek', 'Africa', 'Southern Africa', 2324388, '-22', '17', 825615, 'Namibia', 'Namibian dollar', 'English', 'https://restcountries.eu/data/nam.svg'),
+(156, 'Nauru', '.nr', 'NRU', '674', 'Yaren', 'Oceania', 'Micronesia', 10084, '-0.53333333', '166.91666666', 21, 'Nauru', 'Australian dollar', 'English', 'https://restcountries.eu/data/nru.svg'),
+(157, 'Nepal', '.np', 'NPL', '977', 'Kathmandu', 'Asia', 'Southern Asia', 28431500, '28', '84', 147181, 'नेपाल', 'Nepalese rupee', 'Nepali', 'https://restcountries.eu/data/npl.svg'),
+(158, 'Netherlands', '.nl', 'NLD', '31', 'Amsterdam', 'Europe', 'Western Europe', 17019800, '52.5', '5.75', 41850, 'Nederland', 'Euro', 'Dutch', 'https://restcountries.eu/data/nld.svg'),
+(159, 'New Caledonia', '.nc', 'NCL', '687', 'Nouméa', 'Oceania', 'Melanesia', 268767, '-21.5', '165.5', 18575, 'Nouvelle-Calédonie', 'CFP franc', 'French', 'https://restcountries.eu/data/ncl.svg'),
+(160, 'New Zealand', '.nz', 'NZL', '64', 'Wellington', 'Oceania', 'Australia and New Zealand', 4697854, '-41', '174', 270467, 'New Zealand', 'New Zealand dollar', 'English', 'https://restcountries.eu/data/nzl.svg'),
+(161, 'Nicaragua', '.ni', 'NIC', '505', 'Managua', 'Americas', 'Central America', 6262703, '13', '-85', 130373, 'Nicaragua', 'Nicaraguan córdoba', 'Spanish', 'https://restcountries.eu/data/nic.svg'),
+(162, 'Niger', '.ne', 'NER', '227', 'Niamey', 'Africa', 'Western Africa', 20715000, '16', '8', 1267000, 'Niger', 'West African CFA franc', 'French', 'https://restcountries.eu/data/ner.svg'),
+(163, 'Nigeria', '.ng', 'NGA', '234', 'Abuja', 'Africa', 'Western Africa', 186988000, '10', '8', 923768, 'Nigeria', 'Nigerian naira', 'English', 'https://restcountries.eu/data/nga.svg'),
+(164, 'Niue', '.nu', 'NIU', '683', 'Alofi', 'Oceania', 'Polynesia', 1470, '-19.0333333', '-169.8666666', 260, 'Niuē', 'New Zealand dollar', 'English', 'https://restcountries.eu/data/niu.svg'),
+(165, 'Norfolk Island', '.nf', 'NFK', '672', 'Kingston', 'Oceania', 'Australia and New Zealand', 2302, '-29.0333333', '167.95', 36, 'Norfolk Island', 'Australian dollar', 'English', 'https://restcountries.eu/data/nfk.svg'),
+(166, 'Korea (Democratic People\'s Republic of)', '.kp', 'PRK', '850', 'Pyongyang', 'Asia', 'Eastern Asia', 25281000, '40', '127', 120538, '북한', 'North Korean won', 'Korean', 'https://restcountries.eu/data/prk.svg'),
+(167, 'Northern Mariana Islands', '.mp', 'MNP', '1670', 'Saipan', 'Oceania', 'Micronesia', 56940, '15.2', '145.75', 464, 'Northern Mariana Islands', 'United States dollar', 'English', 'https://restcountries.eu/data/mnp.svg'),
+(168, 'Norway', '.no', 'NOR', '47', 'Oslo', 'Europe', 'Northern Europe', 5223256, '62', '10', 323802, 'Norge', 'Norwegian krone', 'Norwegian', 'https://restcountries.eu/data/nor.svg'),
+(169, 'Oman', '.om', 'OMN', '968', 'Muscat', 'Asia', 'Western Asia', 4420133, '21', '57', 309500, 'عمان', 'Omani rial', 'Arabic', 'https://restcountries.eu/data/omn.svg'),
+(170, 'Pakistan', '.pk', 'PAK', '92', 'Islamabad', 'Asia', 'Southern Asia', 194125062, '30', '70', 881912, 'Pakistan', 'Pakistani rupee', 'English', 'https://restcountries.eu/data/pak.svg'),
+(171, 'Palau', '.pw', 'PLW', '680', 'Ngerulmud', 'Oceania', 'Micronesia', 17950, '7.5', '134.5', 459, 'Palau', '[E]', 'English', 'https://restcountries.eu/data/plw.svg'),
+(172, 'Palestine, State of', '.ps', 'PSE', '970', 'Ramallah', 'Asia', 'Western Asia', 4682467, '31.9', '35.2', 0, 'فلسطين', 'Israeli new sheqel', 'Arabic', 'https://restcountries.eu/data/pse.svg'),
+(173, 'Panama', '.pa', 'PAN', '507', 'Panama City', 'Americas', 'Central America', 3814672, '9', '-80', 75417, 'Panamá', 'Panamanian balboa', 'Spanish', 'https://restcountries.eu/data/pan.svg'),
+(174, 'Papua New Guinea', '.pg', 'PNG', '675', 'Port Moresby', 'Oceania', 'Melanesia', 8083700, '-6', '147', 462840, 'Papua Niugini', 'Papua New Guinean kina', 'English', 'https://restcountries.eu/data/png.svg'),
+(175, 'Paraguay', '.py', 'PRY', '595', 'Asunción', 'Americas', 'South America', 6854536, '-23', '-58', 406752, 'Paraguay', 'Paraguayan guaraní', 'Spanish', 'https://restcountries.eu/data/pry.svg'),
+(176, 'Peru', '.pe', 'PER', '51', 'Lima', 'Americas', 'South America', 31488700, '-10', '-76', 1285216, 'Perú', 'Peruvian sol', 'Spanish', 'https://restcountries.eu/data/per.svg'),
+(177, 'Philippines', '.ph', 'PHL', '63', 'Manila', 'Asia', 'South-Eastern Asia', 103279800, '13', '122', 342353, 'Pilipinas', 'Philippine peso', 'English', 'https://restcountries.eu/data/phl.svg'),
+(178, 'Pitcairn', '.pn', 'PCN', '64', 'Adamstown', 'Oceania', 'Polynesia', 56, '-25.0666666', '-130.1', 47, 'Pitcairn Islands', 'New Zealand dollar', 'English', 'https://restcountries.eu/data/pcn.svg'),
+(179, 'Poland', '.pl', 'POL', '48', 'Warsaw', 'Europe', 'Eastern Europe', 38437239, '52', '20', 312679, 'Polska', 'Polish złoty', 'Polish', 'https://restcountries.eu/data/pol.svg'),
+(180, 'Portugal', '.pt', 'PRT', '351', 'Lisbon', 'Europe', 'Southern Europe', 10374822, '39.5', '-8', 92090, 'Portugal', 'Euro', 'Portuguese', 'https://restcountries.eu/data/prt.svg'),
+(181, 'Puerto Rico', '.pr', 'PRI', '1787', 'San Juan', 'Americas', 'Caribbean', 3474182, '18.25', '-66.5', 8870, 'Puerto Rico', 'United States dollar', 'Spanish', 'https://restcountries.eu/data/pri.svg'),
+(182, 'Qatar', '.qa', 'QAT', '974', 'Doha', 'Asia', 'Western Asia', 2587564, '25.5', '51.25', 11586, 'قطر', 'Qatari riyal', 'Arabic', 'https://restcountries.eu/data/qat.svg'),
+(183, 'Republic of Kosovo', '', 'KOS', '383', 'Pristina', 'Europe', 'Eastern Europe', 1733842, '42.666667', '21.166667', 10908, 'Republika e Kosovës', 'Euro', 'Albanian', 'https://restcountries.eu/data/kos.svg'),
+(184, 'Réunion', '.re', 'REU', '262', 'Saint-Denis', 'Africa', 'Eastern Africa', 840974, '-21.15', '55.5', 0, 'La Réunion', 'Euro', 'French', 'https://restcountries.eu/data/reu.svg'),
+(185, 'Romania', '.ro', 'ROU', '40', 'Bucharest', 'Europe', 'Eastern Europe', 19861408, '46', '25', 238391, 'România', 'Romanian leu', 'Romanian', 'https://restcountries.eu/data/rou.svg'),
+(186, 'Russian Federation', '.ru', 'RUS', '7', 'Moscow', 'Europe', 'Eastern Europe', 146599183, '60', '100', 17124442, 'Россия', 'Russian ruble', 'Russian', 'https://restcountries.eu/data/rus.svg'),
+(187, 'Rwanda', '.rw', 'RWA', '250', 'Kigali', 'Africa', 'Eastern Africa', 11553188, '-2', '30', 26338, 'Rwanda', 'Rwandan franc', 'Kinyarwanda', 'https://restcountries.eu/data/rwa.svg'),
+(188, 'Saint Barthélemy', '.bl', 'BLM', '590', 'Gustavia', 'Americas', 'Caribbean', 9417, '18.5', '-63.41666666', 21, 'Saint-Barthélemy', 'Euro', 'French', 'https://restcountries.eu/data/blm.svg'),
+(189, 'Saint Helena, Ascension and Tristan da Cunha', '.sh', 'SHN', '290', 'Jamestown', 'Africa', 'Western Africa', 4255, '-15.95', '-5.7', 0, 'Saint Helena', 'Saint Helena pound', 'English', 'https://restcountries.eu/data/shn.svg'),
+(190, 'Saint Kitts and Nevis', '.kn', 'KNA', '1869', 'Basseterre', 'Americas', 'Caribbean', 46204, '17.33333333', '-62.75', 261, 'Saint Kitts and Nevis', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/kna.svg'),
+(191, 'Saint Lucia', '.lc', 'LCA', '1758', 'Castries', 'Americas', 'Caribbean', 186000, '13.88333333', '-60.96666666', 616, 'Saint Lucia', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/lca.svg'),
+(192, 'Saint Martin (French part)', '.mf', 'MAF', '590', 'Marigot', 'Americas', 'Caribbean', 36979, '18.08333333', '-63.95', 53, 'Saint-Martin', 'Euro', 'English', 'https://restcountries.eu/data/maf.svg'),
+(193, 'Saint Pierre and Miquelon', '.pm', 'SPM', '508', 'Saint-Pierre', 'Americas', 'Northern America', 6069, '46.83333333', '-56.33333333', 242, 'Saint-Pierre-et-Miquelon', 'Euro', 'French', 'https://restcountries.eu/data/spm.svg'),
+(194, 'Saint Vincent and the Grenadines', '.vc', 'VCT', '1784', 'Kingstown', 'Americas', 'Caribbean', 109991, '13.25', '-61.2', 389, 'Saint Vincent and the Grenadines', 'East Caribbean dollar', 'English', 'https://restcountries.eu/data/vct.svg'),
+(195, 'Samoa', '.ws', 'WSM', '685', 'Apia', 'Oceania', 'Polynesia', 194899, '-13.5833333', '-172.3333333', 2842, 'Samoa', 'Samoan tālā', 'Samoan', 'https://restcountries.eu/data/wsm.svg'),
+(196, 'San Marino', '.sm', 'SMR', '378', 'City of San Marino', 'Europe', 'Southern Europe', 33005, '43.76666666', '12.41666666', 61, 'San Marino', 'Euro', 'Italian', 'https://restcountries.eu/data/smr.svg'),
+(197, 'Sao Tome and Principe', '.st', 'STP', '239', 'São Tomé', 'Africa', 'Middle Africa', 187356, '1', '7', 964, 'São Tomé e Príncipe', 'São Tomé and Príncipe dobra', 'Portuguese', 'https://restcountries.eu/data/stp.svg'),
+(198, 'Saudi Arabia', '.sa', 'SAU', '966', 'Riyadh', 'Asia', 'Western Asia', 32248200, '25', '45', 2149690, 'العربية السعودية', 'Saudi riyal', 'Arabic', 'https://restcountries.eu/data/sau.svg'),
+(199, 'Senegal', '.sn', 'SEN', '221', 'Dakar', 'Africa', 'Western Africa', 14799859, '14', '-14', 196722, 'Sénégal', 'West African CFA franc', 'French', 'https://restcountries.eu/data/sen.svg'),
+(200, 'Serbia', '.rs', 'SRB', '381', 'Belgrade', 'Europe', 'Southern Europe', 7076372, '44', '21', 88361, 'Србија', 'Serbian dinar', 'Serbian', 'https://restcountries.eu/data/srb.svg'),
+(201, 'Seychelles', '.sc', 'SYC', '248', 'Victoria', 'Africa', 'Eastern Africa', 91400, '-4.58333333', '55.66666666', 452, 'Seychelles', 'Seychellois rupee', 'French', 'https://restcountries.eu/data/syc.svg'),
+(202, 'Sierra Leone', '.sl', 'SLE', '232', 'Freetown', 'Africa', 'Western Africa', 7075641, '8.5', '-11.5', 71740, 'Sierra Leone', 'Sierra Leonean leone', 'English', 'https://restcountries.eu/data/sle.svg'),
+(203, 'Singapore', '.sg', 'SGP', '65', 'Singapore', 'Asia', 'South-Eastern Asia', 5535000, '1.36666666', '103.8', 710, 'Singapore', 'Brunei dollar', 'English', 'https://restcountries.eu/data/sgp.svg'),
+(204, 'Sint Maarten (Dutch part)', '.sx', 'SXM', '1721', 'Philipsburg', 'Americas', 'Caribbean', 38247, '18.033333', '-63.05', 34, 'Sint Maarten', 'Netherlands Antillean guilder', 'Dutch', 'https://restcountries.eu/data/sxm.svg'),
+(205, 'Slovakia', '.sk', 'SVK', '421', 'Bratislava', 'Europe', 'Eastern Europe', 5426252, '48.66666666', '19.5', 49037, 'Slovensko', 'Euro', 'Slovak', 'https://restcountries.eu/data/svk.svg'),
+(206, 'Slovenia', '.si', 'SVN', '386', 'Ljubljana', 'Europe', 'Southern Europe', 2064188, '46.11666666', '14.81666666', 20273, 'Slovenija', 'Euro', 'Slovene', 'https://restcountries.eu/data/svn.svg'),
+(207, 'Solomon Islands', '.sb', 'SLB', '677', 'Honiara', 'Oceania', 'Melanesia', 642000, '-8', '159', 28896, 'Solomon Islands', 'Solomon Islands dollar', 'English', 'https://restcountries.eu/data/slb.svg'),
+(208, 'Somalia', '.so', 'SOM', '252', 'Mogadishu', 'Africa', 'Eastern Africa', 11079000, '10', '49', 637657, 'Soomaaliya', 'Somali shilling', 'Somali', 'https://restcountries.eu/data/som.svg'),
+(209, 'South Africa', '.za', 'ZAF', '27', 'Pretoria', 'Africa', 'Southern Africa', 55653654, '-29', '24', 1221037, 'South Africa', 'South African rand', 'Afrikaans', 'https://restcountries.eu/data/zaf.svg'),
+(210, 'South Georgia and the South Sandwich Islands', '.gs', 'SGS', '500', 'King Edward Point', 'Americas', 'South America', 30, '-54.5', '-37', 0, 'South Georgia', 'British pound', 'English', 'https://restcountries.eu/data/sgs.svg'),
+(211, 'Korea (Republic of)', '.kr', 'KOR', '82', 'Seoul', 'Asia', 'Eastern Asia', 50801405, '37', '127.5', 100210, '대한민국', 'South Korean won', 'Korean', 'https://restcountries.eu/data/kor.svg'),
+(212, 'South Sudan', '.ss', 'SSD', '211', 'Juba', 'Africa', 'Middle Africa', 12131000, '7', '30', 619745, 'South Sudan', 'South Sudanese pound', 'English', 'https://restcountries.eu/data/ssd.svg'),
+(213, 'Spain', '.es', 'ESP', '34', 'Madrid', 'Europe', 'Southern Europe', 46438422, '40', '-4', 505992, 'España', 'Euro', 'Spanish', 'https://restcountries.eu/data/esp.svg'),
+(214, 'Sri Lanka', '.lk', 'LKA', '94', 'Colombo', 'Asia', 'Southern Asia', 20966000, '7', '81', 65610, 'śrī laṃkāva', 'Sri Lankan rupee', 'Sinhalese', 'https://restcountries.eu/data/lka.svg'),
+(215, 'Sudan', '.sd', 'SDN', '249', 'Khartoum', 'Africa', 'Northern Africa', 39598700, '15', '30', 1886068, 'السودان', 'Sudanese pound', 'Arabic', 'https://restcountries.eu/data/sdn.svg'),
+(216, 'Suriname', '.sr', 'SUR', '597', 'Paramaribo', 'Americas', 'South America', 541638, '4', '-56', 163820, 'Suriname', 'Surinamese dollar', 'Dutch', 'https://restcountries.eu/data/sur.svg'),
+(217, 'Svalbard and Jan Mayen', '.sj', 'SJM', '4779', 'Longyearbyen', 'Europe', 'Northern Europe', 2562, '78', '20', 0, 'Svalbard og Jan Mayen', 'Norwegian krone', 'Norwegian', 'https://restcountries.eu/data/sjm.svg'),
+(218, 'Swaziland', '.sz', 'SWZ', '268', 'Lobamba', 'Africa', 'Southern Africa', 1132657, '-26.5', '31.5', 17364, 'Swaziland', 'Swazi lilangeni', 'English', 'https://restcountries.eu/data/swz.svg'),
+(219, 'Sweden', '.se', 'SWE', '46', 'Stockholm', 'Europe', 'Northern Europe', 9894888, '62', '15', 450295, 'Sverige', 'Swedish krona', 'Swedish', 'https://restcountries.eu/data/swe.svg'),
+(220, 'Switzerland', '.ch', 'CHE', '41', 'Bern', 'Europe', 'Western Europe', 8341600, '47', '8', 41284, 'Schweiz', 'Swiss franc', 'German', 'https://restcountries.eu/data/che.svg'),
+(221, 'Syrian Arab Republic', '.sy', 'SYR', '963', 'Damascus', 'Asia', 'Western Asia', 18564000, '35', '38', 185180, 'سوريا', 'Syrian pound', 'Arabic', 'https://restcountries.eu/data/syr.svg'),
+(222, 'Taiwan', '.tw', 'TWN', '886', 'Taipei', 'Asia', 'Eastern Asia', 23503349, '23.5', '121', 36193, '臺灣', 'New Taiwan dollar', 'Chinese', 'https://restcountries.eu/data/twn.svg'),
+(223, 'Tajikistan', '.tj', 'TJK', '992', 'Dushanbe', 'Asia', 'Central Asia', 8593600, '39', '71', 143100, 'Тоҷикистон', 'Tajikistani somoni', 'Tajik', 'https://restcountries.eu/data/tjk.svg'),
+(224, 'Tanzania, United Republic of', '.tz', 'TZA', '255', 'Dodoma', 'Africa', 'Eastern Africa', 55155000, '-6', '35', 945087, 'Tanzania', 'Tanzanian shilling', 'Swahili', 'https://restcountries.eu/data/tza.svg'),
+(225, 'Thailand', '.th', 'THA', '66', 'Bangkok', 'Asia', 'South-Eastern Asia', 65327652, '15', '100', 513120, 'ประเทศไทย', 'Thai baht', 'Thai', 'https://restcountries.eu/data/tha.svg'),
+(226, 'Timor-Leste', '.tl', 'TLS', '670', 'Dili', 'Asia', 'South-Eastern Asia', 1167242, '-8.83333333', '125.91666666', 14874, 'Timor-Leste', 'United States dollar', 'Portuguese', 'https://restcountries.eu/data/tls.svg'),
+(227, 'Togo', '.tg', 'TGO', '228', 'Lomé', 'Africa', 'Western Africa', 7143000, '8', '1.16666666', 56785, 'Togo', 'West African CFA franc', 'French', 'https://restcountries.eu/data/tgo.svg'),
+(228, 'Tokelau', '.tk', 'TKL', '690', 'Fakaofo', 'Oceania', 'Polynesia', 1411, '-9', '-172', 12, 'Tokelau', 'New Zealand dollar', 'English', 'https://restcountries.eu/data/tkl.svg'),
+(229, 'Tonga', '.to', 'TON', '676', 'Nuku\'alofa', 'Oceania', 'Polynesia', 103252, '-20', '-175', 747, 'Tonga', 'Tongan paʻanga', 'English', 'https://restcountries.eu/data/ton.svg'),
+(230, 'Trinidad and Tobago', '.tt', 'TTO', '1868', 'Port of Spain', 'Americas', 'Caribbean', 1349667, '11', '-61', 5130, 'Trinidad and Tobago', 'Trinidad and Tobago dollar', 'English', 'https://restcountries.eu/data/tto.svg'),
+(231, 'Tunisia', '.tn', 'TUN', '216', 'Tunis', 'Africa', 'Northern Africa', 11154400, '34', '9', 163610, 'تونس', 'Tunisian dinar', 'Arabic', 'https://restcountries.eu/data/tun.svg'),
+(232, 'Turkey', '.tr', 'TUR', '90', 'Ankara', 'Asia', 'Western Asia', 78741053, '39', '35', 783562, 'Türkiye', 'Turkish lira', 'Turkish', 'https://restcountries.eu/data/tur.svg'),
+(233, 'Turkmenistan', '.tm', 'TKM', '993', 'Ashgabat', 'Asia', 'Central Asia', 4751120, '40', '60', 488100, 'Türkmenistan', 'Turkmenistan manat', 'Turkmen', 'https://restcountries.eu/data/tkm.svg'),
+(234, 'Turks and Caicos Islands', '.tc', 'TCA', '1649', 'Cockburn Town', 'Americas', 'Caribbean', 31458, '21.75', '-71.58333333', 948, 'Turks and Caicos Islands', 'United States dollar', 'English', 'https://restcountries.eu/data/tca.svg'),
+(235, 'Tuvalu', '.tv', 'TUV', '688', 'Funafuti', 'Oceania', 'Polynesia', 10640, '-8', '178', 26, 'Tuvalu', 'Australian dollar', 'English', 'https://restcountries.eu/data/tuv.svg'),
+(236, 'Uganda', '.ug', 'UGA', '256', 'Kampala', 'Africa', 'Eastern Africa', 33860700, '1', '32', 241550, 'Uganda', 'Ugandan shilling', 'English', 'https://restcountries.eu/data/uga.svg'),
+(237, 'Ukraine', '.ua', 'UKR', '380', 'Kiev', 'Europe', 'Eastern Europe', 42692393, '49', '32', 603700, 'Україна', 'Ukrainian hryvnia', 'Ukrainian', 'https://restcountries.eu/data/ukr.svg'),
+(238, 'United Arab Emirates', '.ae', 'ARE', '971', 'Abu Dhabi', 'Asia', 'Western Asia', 9856000, '24', '54', 83600, 'دولة الإمارات العربية المتحدة', 'United Arab Emirates dirham', 'Arabic', 'https://restcountries.eu/data/are.svg'),
+(239, 'United Kingdom of Great Britain and Northern Ireland', '.uk', 'GBR', '44', 'London', 'Europe', 'Northern Europe', 65110000, '54', '-2', 242900, 'United Kingdom', 'British pound', 'English', 'https://restcountries.eu/data/gbr.svg'),
+(240, 'United States of America', '.us', 'USA', '1', 'Washington, D.C.', 'Americas', 'Northern America', 323947000, '38', '-97', 9629091, 'United States', 'United States dollar', 'English', 'https://restcountries.eu/data/usa.svg'),
+(241, 'Uruguay', '.uy', 'URY', '598', 'Montevideo', 'Americas', 'South America', 3480222, '-33', '-56', 181034, 'Uruguay', 'Uruguayan peso', 'Spanish', 'https://restcountries.eu/data/ury.svg'),
+(242, 'Uzbekistan', '.uz', 'UZB', '998', 'Tashkent', 'Asia', 'Central Asia', 31576400, '41', '64', 447400, 'O‘zbekiston', 'Uzbekistani so\'m', 'Uzbek', 'https://restcountries.eu/data/uzb.svg'),
+(243, 'Vanuatu', '.vu', 'VUT', '678', 'Port Vila', 'Oceania', 'Melanesia', 277500, '-16', '167', 12189, 'Vanuatu', 'Vanuatu vatu', 'Bislama', 'https://restcountries.eu/data/vut.svg'),
+(244, 'Venezuela (Bolivarian Republic of)', '.ve', 'VEN', '58', 'Caracas', 'Americas', 'South America', 31028700, '8', '-66', 916445, 'Venezuela', 'Venezuelan bolívar', 'Spanish', 'https://restcountries.eu/data/ven.svg'),
+(245, 'Viet Nam', '.vn', 'VNM', '84', 'Hanoi', 'Asia', 'South-Eastern Asia', 92700000, '16.16666666', '107.83333333', 331212, 'Việt Nam', 'Vietnamese đồng', 'Vietnamese', 'https://restcountries.eu/data/vnm.svg'),
+(246, 'Wallis and Futuna', '.wf', 'WLF', '681', 'Mata-Utu', 'Oceania', 'Polynesia', 11750, '-13.3', '-176.2', 142, 'Wallis et Futuna', 'CFP franc', 'French', 'https://restcountries.eu/data/wlf.svg'),
+(247, 'Western Sahara', '.eh', 'ESH', '212', 'El Aaiún', 'Africa', 'Northern Africa', 510713, '24.5', '-13', 266000, 'الصحراء الغربية', 'Moroccan dirham', 'Spanish', 'https://restcountries.eu/data/esh.svg'),
+(248, 'Yemen', '.ye', 'YEM', '967', 'Sana\'a', 'Asia', 'Western Asia', 27478000, '15', '48', 527968, 'اليَمَن', 'Yemeni rial', 'Arabic', 'https://restcountries.eu/data/yem.svg'),
+(249, 'Zambia', '.zm', 'ZMB', '260', 'Lusaka', 'Africa', 'Eastern Africa', 15933883, '-15', '30', 752612, 'Zambia', 'Zambian kwacha', 'English', 'https://restcountries.eu/data/zmb.svg'),
+(250, 'Zimbabwe', '.zw', 'ZWE', '263', 'Harare', 'Africa', 'Eastern Africa', 14240168, '-20', '30', 390757, 'Zimbabwe', 'Botswana pula', 'English', 'https://restcountries.eu/data/zwe.svg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `info`
+--
+ALTER TABLE `info`
+  ADD PRIMARY KEY (`id_data`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `info`
+--
+ALTER TABLE `info`
+  MODIFY `id_data` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
